@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section class="main">
+        <div class="container">
+            <div class="main-outer">
+                <div class="main-left">
+                    <aside>
+                        <h3>Image Filters</h3>
+                        <form id="slider-form">
+                            <p>
+                                <label for="gs">Grayscale</label>
+                                <input id="gs" name="gs" type="range" min="" max="100" value="0" class="slider">
+                            </p>
+                        
+                            <p>
+                                <label for="blur">Blur</label>
+                                <input id="blur" name="blur" type="range" min="0" max="" value="0" class="slider">
+                            </p>
+
+                            <p>
+                                <label for="hue-rotate">Hue-Rotate</label>
+                                <input id="hue-rotate" name="hue-rotate" type="range" min="0" max="" value="0" class="slider">
+                            </p>
+
+                            <p>
+                                <label for="sepia">Sepia</label>
+                                <input id="sepia" name="sepia" type="range" min="0" max="" value="0" class="slider">
+                            </p>
+                            
+                                <button class="btn btn-success" type="reset" >Reset</button>
+                            
+                           
+                        </form>
+                    </aside>
+                </div>
+            <div class="main-right container">
+                <form action="" id="myform">
+                    <button id="btn" class="btn btn-success">Download</button> 
+                    
+                    <!-- <button id="pre" class="btn btn-success">preview</button>  -->
+                    <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+                    <p><label id="upload" for="file" style="cursor: pointer;">Upload Image</label></p>
+                    <p class="img-area"><img id="output" width="200" /></p>
+                </form>
+                
+            </div>
+         </div>
+            
+        </div>
+    </section>
+    
+<script src="FileSaver.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        
+    <script>
+    
+    //     function my()
+    //     {
+    //         axios({
+    //             url:''
+    //             method:'GET',
+    //             responseType:'blob'
+    //         }).then((response) =>{
+
+        
+    //     const url=window.URL.createObjectURL(new Blob([response.data]));
+    //     const link=document.createElement('a');
+    //     link.href=url;
+    //     link.setAttribute('download','file.jpg');
+    //     document.body.appendChild(link);
+    //     link.click();
+    // })
+    //     }
+
+    </script>
+     
+
+</body>
+</html>
